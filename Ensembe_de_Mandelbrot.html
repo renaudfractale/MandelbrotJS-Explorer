@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+		<script type="text/javascript" src="js_mandelbrot.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+		<title>Fractale de Mandelbrot</title>
+	</head>
+	<body onmousemove="move(event);" onmouseup="stop(event);" onload="init();">
+		<form method="post" action="javascript:draw();">
+			<p>
+				<label for="minX">X minimum : </label>
+				<input type="text" id="minX" value="-2.05"/>
+				<label for="maxX">X maximum : </label>
+				<input type="text" id="maxX" value="0.55"/><br/>
+				<label for="minY">Y minimum : </label>
+				<input type="text" id="minY" value="-1.3"/>
+				<label for="maxY">Y maximum : </label>
+				<input type="text" id="maxY" value="1.3"/><br/>
+				<label for="maxIter">Précision : </label>
+				<input type="text" id="maxIter" value="100"/>
+				<label for="size">Taille : </label>
+				<input type="text" id="size" value="100"/><br/>
+				<input type="submit" value="Valider"/>
+			</p>
+		</form>
+		<div id="canvasDiv"></div>
+		<p> <a id="dl" download="Canvas.png" href="#">Download Canvas</a></p>
+		<p>
+			Programme de <a href="http://www.renaud-henry.fr/">Renaud HENRY</a> basé sur les sources de <a href="http://codes-sources.commentcamarche.net/source/48787-fractale-de-mandelbrot#p10074217"> macsou01</a> <br/>
+			<br/>
+			
+			Pour zoomer sur l'image, deux façons de faire :<br/>
+			- Entrer les coordonnées dans le formulaire.<br/>
+			- Définir la zone à zoomer en la dessinant sur l'image.<br/>
+			Pour sauvegarder l'image :<br/>
+			- Faire uu clic droit sur l'image et choisir "enregistrer l'image sous"<br/>
+			En théorie on peut zoomer à l'infini, mais en pratique, à cause de la précision de calcul limitée, l'image pixelise avec un zoom très important.<br/>
+			Si, après avoir beaucoup zoomé, l'image devient sombre, augmentez la précision.<br/><br/>
+			Le temps de calcul peut être assez long.<br/>
+			Si vous avez le message suivant (sous Firefox) :<br/>
+			<q>Un script sur cette page est peut-être occupé ou ne répond plus. Vous pouvez arrêter le script maintenant, l'ouvrir dans le débogueur ou le laisser continuer.</q><br/>
+			Cliquez sur <q>Continuer</q> pour avoir l'image en entier, sinon cliquez sur <q>Arrêter le script</q>.
+		</p>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+html {
+	background-color:#E9E9E9;
+	margin:0px;
+	padding:8px;
+}
+
+	body {
+		font-family:verdana, arial;
+		font-size:11px;
+		color:#333333;
+		cursor:default;
+		text-align:center;
+		border:solid 1px #333333;
+		background-color:#D6D6D6;
+		margin:0px;
+		padding:4px;
+	}
+
+			form {
+				margin:0px;
+				padding:0px;
+			}
+
+					input {
+						border:solid 1px #333333;
+						background-color:#E9E9E9;
+						margin:2px;
+						padding:2px;
+					}
+					
+					input[type="submit"] {
+						background-color:#B0B0B0;
+					}
+
+			canvas {
+				border:solid 1px #333333;
+				margin:4px;
+				vertical-align:middle;
+			}
+
+			p {
+				border:solid 1px #333333;
+				background-color:#FFFFFF;
+				margin:0px;
+				padding:4px;
+			}
+
+			q {
+				font-weight:bold;
+			}
